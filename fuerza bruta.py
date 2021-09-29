@@ -16,7 +16,7 @@ def funcion(listaclaves,pagina,i,contador):
     candado.acquire()
     browser = webdriver.Chrome("/usr/bin/chromedriver")
     clave=str(listaclaves[i])
-    print("intento: "+str(contador)+" "+str(clave))
+    print("intento "+str(contador)+":"+" "+str(clave))
     if pagina==1:
         #time.sleep(5)
         browser.get("https://www.libreriamoderna.es/es/registro/autenticacion.php")
@@ -37,7 +37,7 @@ def funcion(listaclaves,pagina,i,contador):
         #login=browser.find_element_by_name("login")
         #time.sleep(10)
         #login.click()
-    #time.sleep(3)
+    time.sleep(3)
     browser.close()
     candado.release()
 for numero in range(100):
