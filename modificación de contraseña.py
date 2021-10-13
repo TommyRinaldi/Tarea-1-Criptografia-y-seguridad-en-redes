@@ -28,6 +28,7 @@ elif pagina==2:
         username = browser.find_element_by_id("username")
         username.send_keys("correo nuevo")
         password = browser.find_element_by_id("password").send_keys("clavecorreo1235")
+        time.sleep(3)
         browser.find_element_by_name("login").click()
         browser.find_elements_by_xpath('//a[@href="https://www.ultrapc.cl/my-account/edit-account/"]')[1].click()
         browser.find_element_by_name("account_first_name").send_keys("correo nuevo")
