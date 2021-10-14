@@ -19,6 +19,6 @@ elif pagina==2:
         username = browser.find_element_by_id("username")
         username.send_keys("begoña")
         password = browser.find_element_by_id("password").send_keys("clavebegoña")
-        time.sleep(3)
         browser.find_element_by_name("login").click()
         time.sleep(5)
+        browser.close()
